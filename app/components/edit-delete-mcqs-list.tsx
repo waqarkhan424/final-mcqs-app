@@ -33,7 +33,6 @@ function EditDeleteMCQ({ q }: any) {
     const [question, setQuestion] = useState(q.question);
     const [options, setOptions] = useState(q.options);
     const [correctAnswer, setCorrectAnswer] = useState(q.correctAnswer);
-    const [solution, setSolution] = useState(q.solution ?? "");
     const [deleted, setDeleted] = useState(false);
 
     if (deleted) return null;
@@ -48,7 +47,6 @@ function EditDeleteMCQ({ q }: any) {
             question,
             options,
             correctAnswer,
-            solution,
         });
         setIsEditing(false);
     }
@@ -102,28 +100,16 @@ function EditDeleteMCQ({ q }: any) {
                     ))}
                 </ul>
 
-                {isEditing ? (
+                {isEditing && (
                     <>
                         <Label className="mt-2 block">Correct Answer:</Label>
                         <Input
                             value={correctAnswer}
                             onChange={(e) => setCorrectAnswer(e.target.value)}
                         />
-                        <Label className="mt-2 block">Solution:</Label>
-                        <Textarea
-                            value={solution}
-                            onChange={(e) => setSolution(e.target.value)}
-                        />
+
                     </>
-                ) : (
-                    solution && (
 
-                        <div className="bg-muted mt-4 p-4 rounded text-sm whitespace-pre-line leading-relaxed">
-                            <span className="font-bold block mb-2">Step-by-step:</span>
-
-                            {solution}
-                        </div>
-                    )
                 )}
 
                 {process.env.NODE_ENV !== "production" && (

@@ -10,7 +10,7 @@ export async function upload_mcqs(mcqs: {
 
     console.log("mcqs:::::::::", mcqs)
     try {
-        await prisma.question.createMany({
+        await prisma.question1.createMany({
             data: mcqs,
         });
 

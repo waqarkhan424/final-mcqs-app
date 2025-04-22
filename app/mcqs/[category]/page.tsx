@@ -11,7 +11,7 @@ interface Props {
 export default async function McqsByCategory(props: Props) {
     const { category } = await props.params;
 
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.question1.findMany({
         where: { category },
     });
 

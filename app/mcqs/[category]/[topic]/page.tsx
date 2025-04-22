@@ -1,4 +1,3 @@
-//@ts-nocheck
 import prisma from "@/lib/prisma";
 import EditDeleteMcqsList from "@/app/components/edit-delete-mcqs-list";
 import Typography from "@/components/ui/typography";
@@ -12,7 +11,7 @@ export default async function McqsByTopic({ params }: Props) {
 
     const decodedTopic = decodeURIComponent(topic); // handle URL-safe topic
 
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.question1.findMany({
         where: {
             category,
             topic: decodedTopic,
