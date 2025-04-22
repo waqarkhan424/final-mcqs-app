@@ -34,9 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-
-
       <head>
+        <link rel="icon" href="/onepaper.png" type="image/png" />
+
+
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4332720109955132"
           crossOrigin="anonymous"></script>
       </head>
