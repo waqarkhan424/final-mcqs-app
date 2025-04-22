@@ -9,7 +9,6 @@ import Typography from "@/components/ui/typography";
 // }
 
 // export default async function McqsByCategory({ params }: Props) {
-//     console.log("params::::::::::::::", params);
 
 //     const { category } = params;
 
