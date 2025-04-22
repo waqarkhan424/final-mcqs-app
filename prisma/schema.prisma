@@ -10,12 +10,11 @@ datasource db {
 
 
 
-model Question {
+model Question1 {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   question      String
   options       String[]
   correctAnswer String
-  solution      String?
   category      String?
   topic         String?
 }
