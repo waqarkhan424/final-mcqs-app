@@ -17,4 +17,5 @@ model Question {
   correctAnswer String
   solution      String?
   category      String?
+  topic         String?
 }

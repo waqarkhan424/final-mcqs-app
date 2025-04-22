@@ -22,7 +22,7 @@ export default async function McqsByCategory(props: Props) {
             <Typography variant="h2" className="capitalize text-center">{category.replace(/-/g, " ")} MCQs Topics</Typography>
 
             {topics.length > 0 && (
-                <TopicLinks topics={topics} />
+                <TopicLinks category={category} topics={topics} />
             )}
 
             <EditDeleteMcqsList questions={questions} />
