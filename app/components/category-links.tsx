@@ -4,43 +4,46 @@
 import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import Typography from "@/components/ui/typography";
+
+
+
 import {
-    Percent,
-    Ruler,
-    Tag,
-    Clock,
-    Users,
-    Coins,
-    Banknote,
-    AreaChart,
-    Sigma,
+    BookOpenText,
+    Monitor,
+    Languages,
+    BookType,
+    Landmark,
     Calculator,
-    Divide,
+    FlaskConical,
+    Atom,
+    MoonStar,
+    Globe,
+    Newspaper,
+    BadgeCheck
 } from "lucide-react";
 
 
 
-
 const categories = [
-    { key: "percentage", label: "Percentage", icon: Percent, color: "text-rose-600" },
-    { key: "geometry", label: "Geometry", icon: Ruler, color: "text-indigo-600" },
-    { key: "discount", label: "Discount", icon: Tag, color: "text-yellow-600" },
-    { key: "time-distance", label: "Time and Distance", icon: Clock, color: "text-cyan-600" },
-    { key: "time-work", label: "Time and Work", icon: Clock, color: "text-blue-600" },
-    { key: "partnership", label: "Partnership", icon: Users, color: "text-emerald-600" },
-    { key: "simple-interest", label: "Simple Interest", icon: Coins, color: "text-orange-600" },
-    { key: "compound-interest", label: "Compound Interest", icon: Banknote, color: "text-pink-600" },
-    { key: "area-related", label: "Area Related", icon: AreaChart, color: "text-yellow-700" },
-    { key: "quadratic", label: "Quadratic Equation", icon: Sigma, color: "text-purple-600" },
-    { key: "races-games", label: "Races and Games", icon: Calculator, color: "text-pink-600" },
-    { key: "stock-share", label: "Stock and Share", icon: Banknote, color: "text-green-700" },
-    { key: "mensuration", label: "Mensuration", icon: Ruler, color: "text-lime-600" },
-    { key: "ratio-proportion", label: "Ratio and Proportion", icon: Divide, color: "text-red-600" },
-    { key: "lcm-hcf", label: "LCM and HCF", icon: Divide, color: "text-indigo-600" },
-    { key: "basic-arithmetic", label: "Basic Arithmetic", icon: Calculator, color: "text-sky-700" },
-    { key: "accounting", label: "Accounting", icon: Coins, color: "text-orange-700" },
-    { key: "basic-maths", label: "Basic Maths", icon: Sigma, color: "text-red-700" },
+    { key: "general-knowledge", label: "General Knowledge", icon: BookOpenText, color: "text-yellow-600" },
+    { key: "current-affairs", label: "Current Affairs", icon: Newspaper, color: "text-blue-600" },
+    { key: "ppsc", label: "PPSC", icon: BadgeCheck, color: "text-emerald-600" },
+
+    { key: "everyday-science", label: "Everyday Science", icon: FlaskConical, color: "text-cyan-600" },
+    { key: "general-science", label: "General Science", icon: Atom, color: "text-indigo-600" },
+    { key: "math", label: "Math", icon: Calculator, color: "text-purple-600" },
+
+    { key: "pak-study", label: "Pak Study", icon: Landmark, color: "text-red-600" },
+    { key: "geography", label: "Geography", icon: Globe, color: "text-green-600" },
+    { key: "islamic-study", label: "Islamic Study", icon: MoonStar, color: "text-orange-600" },
+
+    { key: "english", label: "English", icon: BookType, color: "text-pink-600" },
+    { key: "urdu", label: "Urdu", icon: Languages, color: "text-rose-600" },
+
+    { key: "computer", label: "Computer", icon: Monitor, color: "text-teal-600" },
 ];
+
+
 
 
 
@@ -53,9 +56,11 @@ export default function CategoryLinks() {
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
 
+
             <Typography variant="h2" className="mb-6 text-center">
-                Choose a Math Topic to Begin
+                Choose a Subject to Begin
             </Typography>
+
 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
