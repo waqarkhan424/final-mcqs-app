@@ -1,5 +1,4 @@
-import prisma from "@/lib/prisma";
-import EditDeleteMcqsList from "@/app/components/edit-delete-mcqs-list";
+
 import Typography from "@/components/ui/typography";
 import TopicLinks from "@/app/components/topic-links";
 import { categoryTopics } from "@/lib/topics";
@@ -11,9 +10,6 @@ interface Props {
 export default async function McqsByCategory(props: Props) {
     const { category } = await props.params;
 
-    const questions = await prisma.question1.findMany({
-        where: { category },
-    });
 
     const topics = categoryTopics[category] || [];
 
@@ -25,7 +21,6 @@ export default async function McqsByCategory(props: Props) {
                 <TopicLinks category={category} topics={topics} />
             )}
 
-            <EditDeleteMcqsList questions={questions} />
         </div>
 
     );
