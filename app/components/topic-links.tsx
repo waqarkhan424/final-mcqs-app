@@ -12,7 +12,7 @@ export default function TopicLinks({ category, topics }: { category: string, top
                     <li key={idx}>
 
                         <Link
-                            href={`/mcqs/${category}/${slugify(topic, { lower: true, strict: true })}`}
+                            href={`/category/${category}/${slugify(topic, { lower: true, strict: true })}`}
                             className="text-blue-700 underline font-medium hover:text-blue-900"
                         >
                             {topic}

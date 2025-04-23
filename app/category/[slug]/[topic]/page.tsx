@@ -5,15 +5,17 @@ import { categoryTopics } from "@/lib/topics";
 import slugify from "slugify"
 
 interface Props {
-    params: { category: string; topic: string };
+    params: { slug: string; topic: string };
+
 }
 
 export default async function McqsByTopic(props: Props) {
-    const { category, topic } = await props.params;
+    const { slug, topic } = await props.params;
+
 
     const decodedTopic = decodeURIComponent(topic);
 
-    const originalTopics = categoryTopics[category] || [];
+    const originalTopics = categoryTopics[slug] || [];
     const originalTopic = originalTopics.find(
         (t) => slugify(t, { lower: true, strict: true }) === decodedTopic
     );
@@ -23,7 +25,7 @@ export default async function McqsByTopic(props: Props) {
 
     const questions = await prisma.question1.findMany({
         where: {
-            category,
+            category: slug,
             topic: decodedTopic,
         },
     });

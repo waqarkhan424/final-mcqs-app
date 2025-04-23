@@ -4,21 +4,21 @@ import TopicLinks from "@/app/components/topic-links";
 import { categoryTopics } from "@/lib/topics";
 
 interface Props {
-    params: Promise<{ category: string }>;
+    params: Promise<{ slug: string }>;
 }
 
 export default async function McqsByCategory(props: Props) {
-    const { category } = await props.params;
+    const { slug } = await props.params;
 
 
-    const topics = categoryTopics[category] || [];
+    const topics = categoryTopics[slug] || [];
 
     return (
         <div className="p-6 space-y-6 max-w-4xl mx-auto">
-            <Typography variant="h2" className="capitalize text-center">{category.replace(/-/g, " ")} MCQs Topics</Typography>
+            <Typography variant="h2" className="capitalize text-center">{slug.replace(/-/g, " ")} MCQs Topics</Typography>
 
             {topics.length > 0 && (
-                <TopicLinks category={category} topics={topics} />
+                <TopicLinks category={slug} topics={topics} />
             )}
 
         </div>

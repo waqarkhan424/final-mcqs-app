@@ -69,7 +69,7 @@ export default function CategoryLinks() {
                     return (
                         <Card
                             key={cat.key}
-                            onClick={() => router.push(`/mcqs/${cat.key}`)}
+                            onClick={() => router.push(`/category/${cat.key}`)}
                             className="cursor-pointer bg-yellow-50 transition rounded-xl border-none shadow-sm"
                         // className="cursor-pointer bg-yellow-50 transition-transform transform hover:-translate-y-1 hover:shadow-md rounded-xl border-none"
                         >
