@@ -21,7 +21,8 @@ export default async function McqsByTopic({ params }: Props) {
     return (
         <div className="p-6 space-y-6 max-w-4xl mx-auto">
             <Typography variant="h2" className="text-center capitalize">
-                {decodedTopic}
+                {/* {decodedTopic} */}
+                {decodedTopic.replace(/-/g, " ")}
             </Typography>
             <EditDeleteMcqsList questions={questions} />
         </div>
