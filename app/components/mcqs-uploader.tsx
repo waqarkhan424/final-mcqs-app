@@ -13,25 +13,25 @@ export default function McqsUploader() {
 
         const mcqs = [
             {
-                question: "60% of a number is added to 120, the result is the same number. Find the number?",
-                options: ["300", "200", "400", "500"],
-                correctAnswer: "300",
-                category: "math",
-                topic: "Percentage MCQs"
-            },
-            {
-                question: "What is the capital of France?",
-                options: ["Paris", "Berlin", "Madrid", "London"],
-                correctAnswer: "Paris",
+                question: "What is the largest ocean on Earth?",
+                options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+                correctAnswer: "Pacific Ocean",
                 category: "general-knowledge",
-                topic: "World Capitals MCQs"
+                topic: "World’s Famous Airlines – One-Liner"
             },
             {
-                question: "What is 2 + 2?",
-                options: ["3", "4", "5", "6"],
-                correctAnswer: "4",
-                category: "math",
-                topic: "Basic Arithmetic MCQs"
+                question: "Who wrote the national anthem of Pakistan?",
+                options: ["Allama Iqbal", "Hafeez Jullundhri", "Faiz Ahmed Faiz", "Ahmed Faraz"],
+                correctAnswer: "Hafeez Jullundhri",
+                category: "general-knowledge",
+                topic: "Languages MCQs"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Earth", "Jupiter", "Mars", "Venus"],
+                correctAnswer: "Mars",
+                category: "general-knowledge",
+                topic: "List of International Boundary Lines"
             }
         ];
 

@@ -1,18 +1,36 @@
 "use server";
 
 import prisma from "@/lib/prisma";
+import slugify from "slugify";
+
 
 export async function upload_mcqs(mcqs: {
     question: string;
     options: string[];
     correctAnswer: string;
+    category: string;
+    topic: string;
 }[]) {
 
-    console.log("mcqs:::::::::", mcqs)
+    // console.log("mcqs:::::::::", mcqs)
+    // try {
+    //     await prisma.question1.createMany({
+    //         data: mcqs,
+    //     });
+
+
+    const formattedMcqs = mcqs.map((mcq) => ({
+        ...mcq,
+        topic: slugify(mcq.topic, { lower: true, strict: true }),
+    }));
+
     try {
         await prisma.question1.createMany({
-            data: mcqs,
+            data: formattedMcqs,
         });
+
+
+
 
         console.log("MCQs uploaded successfully");
 
