@@ -8,14 +8,10 @@ interface Props {
     params: { category: string; topic: string };
 }
 
-export default async function McqsByTopic({ params }: Props) {
-    const { category, topic } = params;
+export default async function McqsByTopic(props: Props) {
+    const { category, topic } = await props.params;
 
     const decodedTopic = decodeURIComponent(topic);
-
-
-
-    // Get the original topic from the list using slug matching
 
     const originalTopics = categoryTopics[category] || [];
     const originalTopic = originalTopics.find(
