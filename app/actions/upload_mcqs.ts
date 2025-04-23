@@ -12,12 +12,6 @@ export async function upload_mcqs(mcqs: {
     topic: string;
 }[]) {
 
-    // console.log("mcqs:::::::::", mcqs)
-    // try {
-    //     await prisma.question1.createMany({
-    //         data: mcqs,
-    //     });
-
 
     const formattedMcqs = mcqs.map((mcq) => ({
         ...mcq,
