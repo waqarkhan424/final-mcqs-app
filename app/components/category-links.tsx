@@ -10,40 +10,39 @@ import Typography from "@/components/ui/typography";
 import {
     BookOpenText,
     Monitor,
-    Languages,
     BookType,
     Landmark,
     Calculator,
     FlaskConical,
     Atom,
     MoonStar,
-    Globe,
     Newspaper,
-    BadgeCheck
 } from "lucide-react";
 
 
 
+
+
+
 const categories = [
+    { key: "english", label: "English", icon: BookType, color: "text-pink-600" },
+
     { key: "general-knowledge", label: "General Knowledge", icon: BookOpenText, color: "text-yellow-600" },
+
     { key: "current-affairs", label: "Current Affairs", icon: Newspaper, color: "text-blue-600" },
-    { key: "ppsc", label: "PPSC", icon: BadgeCheck, color: "text-emerald-600" },
+
+    { key: "pakistan-studies", label: "Pakistan Studies", icon: Landmark, color: "text-red-600" },
+
+    { key: "islamic-studies", label: "Islamic Studies", icon: MoonStar, color: "text-orange-600" },
+
+    { key: "mathematics", label: "Mathematics", icon: Calculator, color: "text-purple-600" },
 
     { key: "everyday-science", label: "Everyday Science", icon: FlaskConical, color: "text-cyan-600" },
-    { key: "general-science", label: "General Science", icon: Atom, color: "text-indigo-600" },
-    { key: "math", label: "Math", icon: Calculator, color: "text-purple-600" },
-
-    { key: "pak-study", label: "Pak Study", icon: Landmark, color: "text-red-600" },
-    { key: "geography", label: "Geography", icon: Globe, color: "text-green-600" },
-    { key: "islamic-study", label: "Islamic Study", icon: MoonStar, color: "text-orange-600" },
-
-    { key: "english", label: "English", icon: BookType, color: "text-pink-600" },
-    { key: "urdu", label: "Urdu", icon: Languages, color: "text-rose-600" },
 
     { key: "computer", label: "Computer", icon: Monitor, color: "text-teal-600" },
+
+    { key: "iq", label: "IQ / Logical Reasoning", icon: Atom, color: "text-indigo-600" },
 ];
-
-
 
 
 
