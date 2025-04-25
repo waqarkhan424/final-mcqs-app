@@ -13,7 +13,7 @@ export default function Home() {
           Welcome to <span className="text-primary font-serif">one</span><span className="text-muted-foreground font-serif">paper</span>
         </Typography>
         <Typography className="text-muted-foreground text-sm sm:text-base">
-          Important Math MCQs with detailed answers and explanations – Perfect for all levels of Mathematics and one-paper government job test preparation.
+          Prepare for government jobs with topic-wise One Paper MCQs – English, GK, Current Affairs, Islamic Studies, Math, Computer, and more.
         </Typography>
       </div>
 

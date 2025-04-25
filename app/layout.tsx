@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "onepaper - Math MCQs",
-  description: "Important Math MCQs for one paper exams",
+  title: "OnePaper - MCQs for Government Job Tests",
+  description: "Practice One Paper MCQs for PPSC, FPSC, and other government job exams – English, General Knowledge, Math, Computer, Current Affairs, and more.",
   other: {
     "google-site-verification": "sYocTKrMYA2RYVes1Peb7lhogRKIBKqAupUjtEiJa1w"
   }
