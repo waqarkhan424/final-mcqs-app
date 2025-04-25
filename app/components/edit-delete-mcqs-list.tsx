@@ -4,6 +4,7 @@ import { useState } from "react";
 import { delete_mcqs } from "@/app/actions/delete_mcqs";
 import { update_mcqs } from "@/app/actions/update_mcqs";
 
+import Typography from "@/components/ui/typography";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -47,13 +48,13 @@ function EditDeleteMCQ({ q }: any) {
 
 
         <div className="space-y-2 pb-6 border-b border-muted">
-            <h3 className="font-semibold text-base sm:text-lg">
+            <Typography variant="h3">
                 {isEditing ? (
                     <Input value={question} onChange={(e) => setQuestion(e.target.value)} />
                 ) : (
                     q.question
                 )}
-            </h3>
+            </Typography>
 
             <ul className="list-none pl-2 space-y-0.5">
                 {options.map((opt: string, idx: number) => (
@@ -72,7 +73,7 @@ function EditDeleteMCQ({ q }: any) {
                             <span
                                 className={
                                     opt === correctAnswer
-                                        ? "text-green-700 font-bold"
+                                        ? "text-green-700 font-semibold"
                                         : ""
                                 }
                             >
