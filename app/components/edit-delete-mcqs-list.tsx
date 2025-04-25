@@ -4,13 +4,6 @@ import { useState } from "react";
 import { delete_mcqs } from "@/app/actions/delete_mcqs";
 import { update_mcqs } from "@/app/actions/update_mcqs";
 
-
-import {
-    Card,
-    CardHeader,
-    CardTitle,
-    CardContent
-} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -52,91 +45,76 @@ function EditDeleteMCQ({ q }: any) {
 
     return (
 
-        <Card>
-            <CardHeader>
-                <CardTitle className="text-lg sm:text-xl font-semibold leading-snug">
 
-                    {isEditing ? (
-                        <Input
-                            value={question}
-                            onChange={(e) => setQuestion(e.target.value)}
-                        />
-                    ) : (
-                        question
-                    )}
-                </CardTitle>
-            </CardHeader>
-
-
-
-            <CardContent className="space-y-1.5">
-                <ul className="list-none pl-2 space-y-0.5">
-
-                    {options.map((opt: string, idx: number) => (
-                        <li key={idx}>
-                            {String.fromCharCode(65 + idx)}.{" "}
-                            {isEditing ? (
-                                <Input
-                                    value={opt}
-                                    onChange={(e) => {
-                                        const newOptions = [...options];
-                                        newOptions[idx] = e.target.value;
-                                        setOptions(newOptions);
-                                    }}
-                                />
-                            ) : (
-                                <span
-                                    className={
-                                        opt === correctAnswer
-                                            ? "text-green-700 font-semibold"
-                                            : ""
-                                    }
-                                >
-                                    {opt}
-                                </span>
-                            )}
-                        </li>
-                    ))}
-                </ul>
-
-                {isEditing && (
-                    <>
-                        <Label className="mt-2 block">Correct Answer:</Label>
-                        <Input
-                            value={correctAnswer}
-                            onChange={(e) => setCorrectAnswer(e.target.value)}
-                        />
-
-                    </>
-
+        <div className="space-y-2 pb-6 border-b border-muted">
+            <h3 className="font-semibold text-base sm:text-lg">
+                {isEditing ? (
+                    <Input value={question} onChange={(e) => setQuestion(e.target.value)} />
+                ) : (
+                    q.question
                 )}
+            </h3>
 
-                {process.env.NODE_ENV !== "production" && (
-                    <div className="flex gap-4 mt-3">
+            <ul className="list-none pl-2 space-y-0.5">
+                {options.map((opt: string, idx: number) => (
+                    <li key={idx}>
+                        {String.fromCharCode(65 + idx)}.{" "}
                         {isEditing ? (
-                            <>
-                                <Button size="sm" onClick={handleSave}>Save</Button>
-                                <Button
-                                    size="sm"
-                                    variant="outline"
-                                    onClick={() => setIsEditing(false)}
-                                >
-                                    Cancel
-                                </Button>
-                            </>
+                            <Input
+                                value={opt}
+                                onChange={(e) => {
+                                    const newOptions = [...options];
+                                    newOptions[idx] = e.target.value;
+                                    setOptions(newOptions);
+                                }}
+                            />
                         ) : (
-                            <>
-                                {/* <Button size="sm" onClick={() => setIsEditing(true)}>Edit</Button>
-                                <Button size="sm" variant="destructive" onClick={handleDelete}>
-                                    Delete
-                                </Button> */}
-                            </>
+                            <span
+                                className={
+                                    opt === correctAnswer
+                                        ? "text-green-700 font-bold"
+                                        : ""
+                                }
+                            >
+                                {opt}
+                            </span>
                         )}
-                    </div>
-                )}
-            </CardContent>
-        </Card>
+                    </li>
+                ))}
+            </ul>
 
+            {isEditing && (
+                <>
+                    <Label className="mt-2 block">Correct Answer:</Label>
+                    <Input
+                        value={correctAnswer}
+                        onChange={(e) => setCorrectAnswer(e.target.value)}
+                    />
+                </>
+            )}
+
+            {process.env.NODE_ENV !== "production" && (
+                <div className="flex gap-4 mt-2">
+                    {isEditing ? (
+                        <>
+                            <Button size="sm" onClick={handleSave}>
+                                Save
+                            </Button>
+                            <Button size="sm" variant="outline" onClick={() => setIsEditing(false)}>
+                                Cancel
+                            </Button>
+                        </>
+                    ) : (
+                        <>
+                            {/* <Button size="sm" onClick={() => setIsEditing(true)}>Edit</Button>
+                            <Button size="sm" variant="destructive" onClick={handleDelete}>
+                                Delete
+                            </Button> */}
+                        </>
+                    )}
+                </div>
+            )}
+        </div>
 
 
 
