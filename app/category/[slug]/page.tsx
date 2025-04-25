@@ -20,7 +20,7 @@ export default async function McqsByCategory(props: Props) {
 
             <div className="border-b pb-4 space-y-2">
                 <Typography variant="h2" className="capitalize">
-                    {slug.replace(/-/g, " ")} MCQs
+                    {slug.replace(/-/g, " ")} MCQs Topics
                 </Typography>
                 <Typography variant="p" className="text-muted-foreground">
                     Select a topic below to start practicing. Each topic is packed with important and exam-relevant questions.

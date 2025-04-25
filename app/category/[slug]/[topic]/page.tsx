@@ -31,11 +31,16 @@ export default async function McqsByTopic(props: Props) {
     });
 
     return (
-        <div className="p-6 space-y-6 max-w-4xl mx-auto">
-            <Typography variant="h2" className="text-center capitalize">
-                {originalTopic || decodedTopic.replace(/-/g, " ")}
-            </Typography>
+
+        <div className="px-4 pt-12 pb-20 sm:pt-16 sm:pb-28 max-w-5xl mx-auto space-y-6">
+            <div className="pb-4 space-y-2 text-left">
+                <Typography variant="h2" className="capitalize">
+                    {originalTopic || decodedTopic.replace(/-/g, " ")}
+                </Typography>
+            </div>
+
             <EditDeleteMcqsList questions={questions} />
         </div>
+
     );
 }
