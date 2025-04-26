@@ -120,5 +120,43 @@ export const categoryTopics: Record<string, string[]> = {
     ],
 
 
+    "ppsc": [
+        "Lecturer (BS-17)",
+        "Tehsildar (BS-16)",
+        "Sub Inspector (BS-14)",
+        "Assistant (BS-16)",
+        "Excise Inspector (BS-16)",
+        "Junior Clerk (BS-11)",
+        "ASI (Assistant Sub Inspector, BS-11)",
+        "Research Officer (BS-17)",
+        "District Food Controller (BS-17)",
+        "Agriculture Officer (BS-17)",
+        "Labour Inspector (BS-14)"
+    ],
+
+    "fpsc": [
+        "Lecturer (BS-17)",
+        "Assistant Private Secretary (BS-16)",
+        "Appraising Officer (BS-16)",
+        "Preventive Officer (BS-16)"
+    ],
+
+    "spsc": [
+        "Lecturer (BS-17)",
+        "Assistant (BS-16)",
+        "Sub Inspector (BS-14)",
+        "Medical Officer (BS-17)",
+        "Assistant Director (BS-17)"
+    ],
+
+    "police": [
+        "Inspector (BS-16)",
+        "Sub Inspector (BS-14)",
+        "ASI (Assistant Sub Inspector, BS-11)",
+        "Police Constable (BS-07)"
+    ]
+
+
+
 
 };

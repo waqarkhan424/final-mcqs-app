@@ -37,11 +37,16 @@ const categories = [
     { key: "iq", label: "IQ / Logical Reasoning", icon: Atom, color: "text-indigo-600" },
 ];
 
+
+
+
 const pastPapers = [
     { key: "fia", label: "FIA Past Papers", icon: BadgeCheck, color: "text-emerald-600" },
+    { key: "ppsc", label: "PPSC Past Papers", icon: BadgeCheck, color: "text-rose-600" },
+    { key: "fpsc", label: "FPSC Past Papers", icon: BadgeCheck, color: "text-indigo-600" },
+    { key: "spsc", label: "SPSC Past Papers", icon: BadgeCheck, color: "text-violet-600" },
+    { key: "police", label: "Police Past Papers", icon: BadgeCheck, color: "text-blue-600" }
 ];
-
-
 
 
 export default function CategoryLinks() {
