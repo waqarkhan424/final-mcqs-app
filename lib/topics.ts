@@ -106,5 +106,19 @@ export const categoryTopics: Record<string, string[]> = {
         "Logical Puzzle Questions",
         "Calendar or Clock Questions",
         "Pattern Matching"
-    ]
+    ],
+
+    "fia": [
+        "Assistant Director (BS-17)",
+        "Inspector Investigation (BS-16)",
+        "Assistant (BS-15)",
+        "Sub Inspector (BS-14)",
+        "UDC (Upper Division Clerk, BS-11)",
+        "ASI (Assistant Sub Inspector, BS-09)",
+        "LDC (Lower Division Clerk, BS-09)",
+        "Constable (BS-05)"
+    ],
+
+
+
 };
