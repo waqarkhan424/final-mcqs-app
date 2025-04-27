@@ -154,8 +154,40 @@ export const categoryTopics: Record<string, string[]> = {
         "Sub Inspector (BS-14)",
         "ASI (Assistant Sub Inspector, BS-11)",
         "Police Constable (BS-07)"
-    ]
+    ],
 
+    "ib": [
+        "Intelligence Officer (BS-17)",
+        "Inspector (BS-16)",
+        "Assistant (BS-15)",
+        "Sub Inspector (BS-14)",
+        "UDC (Upper Division Clerk, BS-11)",
+        "LDC (Lower Division Clerk, BS-09)"
+    ],
+
+    "nab": [
+        "Assistant Director (BS-17)",
+        "Investigation Officer (BS-16)",
+        "Assistant Private Secretary (BS-16)",
+        "Stenotypist (BS-14)",
+        "Clerk (BS-11)"
+    ],
+
+    "anti-corruption": [
+        "Assistant Director Investigation (BS-17)",
+        "Inspector (BS-16)",
+        "Sub Inspector (BS-14)",
+        "Assistant (BS-16)",
+        "Clerk (BS-11)"
+    ],
+
+    "education": [
+        "Assistant Professor (BS-18)",
+        "Lecturer (BS-17)",
+        "Subject Specialist (BS-17)",
+        "Headmaster/Headmistress (BS-17)",
+        "School Teacher (BS-14)"
+    ],
 
 
 

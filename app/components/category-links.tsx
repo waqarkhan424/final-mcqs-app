@@ -42,11 +42,17 @@ const categories = [
 
 const pastPapers = [
     { key: "fia", label: "FIA", icon: BadgeCheck, color: "text-emerald-600" },
+    { key: "ib", label: "Intelligence Bureau", icon: BadgeCheck, color: "text-lime-600" },
+    { key: "nab", label: "NAB", icon: BadgeCheck, color: "text-green-600" },
+    { key: "anti-corruption", label: "Anti-Corruption", icon: BadgeCheck, color: "text-pink-600" },
+    { key: "education", label: "Education Department", icon: BadgeCheck, color: "text-cyan-600" },
     { key: "ppsc", label: "PPSC", icon: BadgeCheck, color: "text-rose-600" },
     { key: "fpsc", label: "FPSC", icon: BadgeCheck, color: "text-indigo-600" },
     { key: "spsc", label: "SPSC", icon: BadgeCheck, color: "text-violet-600" },
-    { key: "police", label: "Police", icon: BadgeCheck, color: "text-blue-600" }
+    { key: "police", label: "Police", icon: BadgeCheck, color: "text-blue-600" },
 ];
+
+
 
 
 
