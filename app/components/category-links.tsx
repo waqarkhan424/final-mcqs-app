@@ -41,12 +41,13 @@ const categories = [
 
 
 const pastPapers = [
-    { key: "fia", label: "FIA Past Papers", icon: BadgeCheck, color: "text-emerald-600" },
-    { key: "ppsc", label: "PPSC Past Papers", icon: BadgeCheck, color: "text-rose-600" },
-    { key: "fpsc", label: "FPSC Past Papers", icon: BadgeCheck, color: "text-indigo-600" },
-    { key: "spsc", label: "SPSC Past Papers", icon: BadgeCheck, color: "text-violet-600" },
-    { key: "police", label: "Police Past Papers", icon: BadgeCheck, color: "text-blue-600" }
+    { key: "fia", label: "FIA", icon: BadgeCheck, color: "text-emerald-600" },
+    { key: "ppsc", label: "PPSC", icon: BadgeCheck, color: "text-rose-600" },
+    { key: "fpsc", label: "FPSC", icon: BadgeCheck, color: "text-indigo-600" },
+    { key: "spsc", label: "SPSC", icon: BadgeCheck, color: "text-violet-600" },
+    { key: "police", label: "Police", icon: BadgeCheck, color: "text-blue-600" }
 ];
+
 
 
 export default function CategoryLinks() {
@@ -83,7 +84,7 @@ export default function CategoryLinks() {
 
             <div>
                 <Typography variant="h2" className="mb-6 text-center">
-                    Choose Past Papers to Begin
+                    Choose Past Paper MCQs to Begin
                 </Typography>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
