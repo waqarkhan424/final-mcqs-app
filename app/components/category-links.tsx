@@ -90,7 +90,7 @@ export default function CategoryLinks() {
 
             <div>
                 <Typography variant="h2" className="mb-6 text-center">
-                    Choose Past Paper MCQs to Begin
+                    Past Paper MCQs
                 </Typography>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">

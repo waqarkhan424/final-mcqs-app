@@ -33,12 +33,12 @@ export default async function McqsByTopic(props: Props) {
     return (
 
         <div className="px-4 pt-12 pb-20 sm:pt-16 sm:pb-28 max-w-5xl mx-auto space-y-6">
-            <div className="pb-4 space-y-2 text-left">
+
+            <div className="bg-muted p-4 text-left rounded-lg">
                 <Typography variant="h2" className="capitalize">
                     {originalTopic || decodedTopic.replace(/-/g, " ")} MCQs
                 </Typography>
             </div>
-
             <EditDeleteMcqsList questions={questions} />
         </div>
 
