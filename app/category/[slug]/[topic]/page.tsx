@@ -3,6 +3,13 @@ import EditDeleteMcqsList from "@/app/components/edit-delete-mcqs-list";
 import Typography from "@/components/ui/typography";
 import { categoryTopics } from "@/lib/topics";
 import slugify from "slugify"
+import {
+    Card,
+    CardContent,
+    CardTitle,
+    CardDescription,
+} from "@/components/ui/card";
+
 
 interface Props {
     params: { slug: string; topic: string };
@@ -39,7 +46,22 @@ export default async function McqsByTopic(props: Props) {
                     {originalTopic || decodedTopic.replace(/-/g, " ")} MCQs
                 </Typography>
             </div>
-            <EditDeleteMcqsList questions={questions} />
+
+
+
+            {questions.length === 0 ? (
+                <Card className="bg-yellow-50">
+                    <CardContent className="text-center space-y-2">
+                        <CardTitle > MCQs Coming Soon!</CardTitle>
+                        <CardDescription >
+                            We're working hard to upload high-quality questions for this topic. Please check back later.
+                        </CardDescription>
+                    </CardContent>
+                </Card>
+            ) : (
+                <EditDeleteMcqsList questions={questions} />
+            )}
+
         </div>
 
     );
